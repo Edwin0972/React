@@ -1,0 +1,169 @@
+:root {
+  --bg: #fff;
+  --text: #222;
+  --muted: #666;
+  --border: #ccc;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+body {
+  margin: 0;
+}
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #eee;
+  --muted: #aaa;
+  --border: #444;
+}
+a {
+  color: inherit;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+}
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+.brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 0.85rem;
+}
+.project-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.project-card {
+  display: block;
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-decoration: none;
+}
+.project-card h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+.card {
+  border: 1px solid var(--border);
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.card__header h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+.filters {
+  display: flex;
+  gap: 6px;
+}
+.filters button[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--bg);
+}
+.tasks {
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px;
+}
+.task {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 0;
+}
+.task__status {
+  min-width: 80px;
+  font-size: 0.85rem;
+}
+.task__title {
+  flex: 1;
+}
+.task--done .task__title {
+  text-decoration: line-through;
+}
+.skeleton {
+  height: 60px;
+  margin-bottom: 12px;
+  background: var(--border);
+}
+.nav {
+  margin-right: auto;
+  margin-left: 24px;
+}
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+}
+.project-form {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+}
+.project-form label {
+  display: grid;
+  gap: 4px;
+}
+.primary {
+  background: var(--text);
+  color: var(--bg);
+}
+.task-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+}
+.task-form input {
+  flex: 1;
+}
+.empty {
+  text-align: center;
+  color: var(--muted);
+}
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button {
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
