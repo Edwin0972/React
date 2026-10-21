@@ -85,3 +85,67 @@ button {
   font-size: 2rem;
   flex: 1;
 }
+
+.brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-right: auto;
+  margin-left: 24px;
+}
+.nav a {
+  color: inherit;
+}
+.nav a.active {
+  font-weight: bold;
+}
+.muted {
+  color: #777;
+}
+.small {
+  font-size: 0.85rem;
+}
+.project-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.project-card {
+  display: block;
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.project-card h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+}
+.field {
+  display: grid;
+  gap: 4px;
+}
+textarea {
+  font: inherit;
+  color: inherit;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+}
+.skeleton {
+  height: 60px;
+  margin-bottom: 12px;
+  background: var(--border);
+}

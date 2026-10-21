@@ -1,0 +1,16 @@
+{
+  "projects": [
+    { "id": "site-esiee", "name": "Site ESIEE", "description": "Refonte du site de l'association étudiante." },
+    { "id": "app-bde", "name": "Application BDE", "description": "Application mobile pour les événements du BDE." },
+    { "id": "revisions", "name": "Révisions QCM", "description": "Plan de révision avant le QCM final." }
+  ],
+  "tasks": [
+    { "id": "t1", "projectId": "site-esiee", "title": "Maquette de la page d'accueil", "status": "done", "priority": 1 },
+    { "id": "t2", "projectId": "site-esiee", "title": "Intégrer le menu", "status": "doing", "priority": 2 },
+    { "id": "t3", "projectId": "site-esiee", "title": "Page contact", "status": "todo", "priority": 3 },
+    { "id": "t4", "projectId": "app-bde", "title": "Écran liste des événements", "status": "doing", "priority": 1 },
+    { "id": "t5", "projectId": "app-bde", "title": "Notifications", "status": "todo", "priority": 2 },
+    { "id": "t6", "projectId": "revisions", "title": "Relire les hooks", "status": "done", "priority": 2 },
+    { "id": "t7", "projectId": "revisions", "title": "Refaire le TP2", "status": "todo", "priority": 1 }
+  ]
+}
