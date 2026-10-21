@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskFlow - TP4 (Next.js)
 
-## Getting Started
+Projet du module React + Next.js, M2 Informatique, ESIEE-IT.
+Auteur : Edwin Molinier
 
-First, run the development server:
+Le même TaskFlow que le TP3, refait avec Next.js. Les données sont lues sur le serveur
+dans le fichier `db.json`, sans API séparée.
 
-```bash
+## Fonctionnalités
+
+- layout commun avec une barre de navigation
+- liste des projets (composant serveur)
+- page d'un projet avec un dossier `[id]` et des filtres (composant client)
+- écran de chargement (`loading.tsx`) et page 404 (`not-found.tsx`)
+- page « À propos »
+- création de projet, ajout, statut et suppression de tâches, mode sombre
+
+## Lancer le projet
+
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site est sur http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Démo en ligne
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://taskflow-tp4-tonnom-indol.vercel.app
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+En ligne, les projets et tâches ajoutés ne sont pas conservés (les fichiers du serveur
+ne sont pas modifiables sur Vercel). La lecture fonctionne normalement.
