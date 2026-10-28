@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# TaskFlow - TP3
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Projet du module React + Next.js, M2 Informatique, ESIEE-IT.
+Auteur : Edwin Molinier
 
-Currently, two official plugins are available:
+TaskFlow v2 est une application à plusieurs pages, connectée à une API.
+Les projets et les tâches sont stockés par json-server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fonctionnalités
 
-## React Compiler
+- liste des projets chargée depuis l'API
+- une page par projet avec ses tâches (ajout, statut, suppression, filtre)
+- création d'un projet avec un formulaire validé
+- page 404 pour une adresse ou un projet inexistant
+- navigation avec React Router, thème clair / sombre
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Lancer le projet
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Cette commande démarre l'API (http://localhost:3001) et le site (http://localhost:5173).
+Pour remettre les données de départ : `npm run reset-db`
+
+## Démo en ligne
+
+- Site : https://react-sigma-black.vercel.app
+- API : https://taskflow-api-tonnom.onrender.com/projects
+
+L'API est sur Render (offre gratuite) : elle s'endort après un moment sans visite,
+le premier chargement peut donc prendre environ une minute.
