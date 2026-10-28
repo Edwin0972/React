@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# TaskFlow - TP4 (Next.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Projet du module React + Next.js, M2 Informatique, ESIEE-IT.
+Auteur : Edwin Molinier
 
-Currently, two official plugins are available:
+Le même TaskFlow que le TP3, refait avec Next.js. Les données sont lues sur le serveur
+dans le fichier `db.json`, sans API séparée.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fonctionnalités
 
-## React Compiler
+- layout commun avec une barre de navigation
+- liste des projets (composant serveur)
+- page d'un projet avec un dossier `[id]` et des filtres (composant client)
+- écran de chargement (`loading.tsx`) et page 404 (`not-found.tsx`)
+- page « À propos »
+- création de projet, ajout, statut et suppression de tâches, mode sombre
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Lancer le projet
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Le site est sur http://localhost:3000
+
+## Démo en ligne
+
+https://taskflow-tp4-tonnom-indol.vercel.app
+
+En ligne, les projets et tâches ajoutés ne sont pas conservés (les fichiers du serveur
+ne sont pas modifiables sur Vercel). La lecture fonctionne normalement.
